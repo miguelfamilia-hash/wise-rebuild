@@ -3,46 +3,74 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Wise BPO | Boutique Nearshore Solutions</title>
+    <title>Wise BPO | Growth is Why We Succeed</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
     <style>
-        body { font-family: 'Inter', sans-serif; }
-        .fade-in { animation: fadeIn 1.5s ease-out; }
+        :root { --wise-orange: #FF6701; --wise-dark: #434343; }
+        body { font-family: 'Inter', sans-serif; color: var(--wise-dark); }
+        .bg-wise { background-color: var(--wise-orange); }
+        .text-wise { color: var(--wise-orange); }
+        .fade-in { animation: fadeIn 1.2s ease-out forwards; opacity: 0; }
         @keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
     </style>
 </head>
-<body class="bg-white text-slate-900">
+<body class="bg-white">
 
-    <nav class="flex justify-between items-center px-8 py-6 max-w-7xl mx-auto">
-        <div class="text-2xl font-bold tracking-tighter">WISE<span class="text-blue-600">BP</span></div>
-        <div class="hidden md:flex space-x-8 text-sm font-medium text-slate-600">
-            <a href="#" class="hover:text-blue-600 transition">Why Us</a>
-            <a href="#" class="hover:text-blue-600 transition">Services</a>
-            <a href="#" class="hover:text-blue-600 transition">Industries</a>
-            <a href="#" class="hover:text-blue-600 transition">Resources</a>
+    <nav class="flex justify-between items-center px-6 py-8 max-w-7xl mx-auto">
+        <div class="text-3xl font-extrabold tracking-tighter">WISE<span class="text-wise">BPO</span></div>
+        <div class="hidden md:flex space-x-10 text-sm font-semibold uppercase tracking-widest">
+            <a href="#" class="hover:text-wise transition">Why Us</a>
+            <a href="#" class="hover:text-wise transition">Services</a>
+            <a href="#" class="hover:text-wise transition">Industries</a>
+            <a href="#" class="hover:text-wise transition">Resources</a>
         </div>
-        <a href="YOUR_TYPEFORM_URL_HERE" class="bg-slate-900 text-white px-6 py-2.5 rounded-full text-sm font-semibold hover:bg-blue-600 transition shadow-lg">
+        <a href="YOUR_TYPEFORM_LINK" class="bg-wise text-white px-8 py-3 rounded-full font-bold shadow-lg hover:scale-105 transition-transform">
             Let's Meet
         </a>
     </nav>
 
-    <section class="max-w-7xl mx-auto px-8 pt-20 pb-32 text-center md:text-left flex flex-col md:flex-row items-center">
+    <header class="max-w-7xl mx-auto px-6 py-20 flex flex-col md:flex-row items-center">
         <div class="md:w-1/2 fade-in">
-            <h1 class="text-5xl md:text-7xl font-bold tracking-tight leading-tight">
-                High-Touch Talent <br> <span class="text-blue-600">Beyond AI.</span>
+            <h1 class="text-6xl md:text-8xl font-extrabold leading-tight">
+                Growth is why we <span class="text-wise">succeed.</span>
             </h1>
-            <p class="mt-6 text-lg text-slate-600 max-w-lg leading-relaxed">
-                Elite nearshore teams for technical roles and concierge support. We provide the C1/C2 communication skills and technical depth that automation simply cannot replicate.
+            <p class="mt-8 text-xl text-gray-500 max-w-lg">
+                Boutique nearshore talent specializing in roles AI can't touch. We provide C1/C2 communication and technical expertise.
             </p>
-            <div class="mt-10 flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4">
-                <button class="bg-blue-600 text-white px-8 py-4 rounded-xl font-bold hover:bg-blue-700 transition">View Our Services</button>
-                <button class="border border-slate-200 px-8 py-4 rounded-xl font-bold hover:bg-slate-50 transition">The Wise Difference</button>
+            <div class="mt-12">
+                <button class="bg-wise text-white px-10 py-5 rounded-2xl font-bold text-lg hover:shadow-2xl transition">Explore Our Nearshore Roles</button>
             </div>
         </div>
-        <div class="md:w-1/2 mt-12 md:mt-0 flex justify-center fade-in" style="animation-delay: 0.3s;">
-             <div class="w-full h-96 bg-slate-100 rounded-3xl overflow-hidden shadow-2xl flex items-center justify-center text-slate-400 italic">
-                [High-end Image: Your Professional Team]
+        <div class="md:w-1/2 mt-16 md:mt-0 fade-in" style="animation-delay: 0.2s;">
+            <div class="relative">
+                <div class="absolute -top-4 -left-4 w-64 h-64 bg-orange-100 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob"></div>
+                <div class="relative bg-gray-100 rounded-[3rem] h-[500px] w-full flex items-center justify-center overflow-hidden">
+                    <span class="text-gray-400 italic text-sm text-center px-10">[Professional Team Placeholder: Focus on Human Connection]</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="bg-gray-50 py-24">
+        <div class="max-w-7xl mx-auto px-6">
+            <h2 class="text-4xl font-bold mb-12">Complex Roles, Handled by Experts</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-white p-8 rounded-3xl shadow-sm border border-gray-100 hover:border-orange-500 transition">
+                    <div class="w-12 h-12 bg-orange-50 rounded-lg mb-6 flex items-center justify-center text-wise font-bold">01</div>
+                    <h3 class="text-xl font-bold mb-4">Account Management</h3>
+                    <p class="text-gray-500">Deep relationship building that requires emotional intelligence automation can't provide.</p>
+                </div>
+                <div class="bg-white p-8 rounded-3xl shadow-sm border border-gray-100 hover:border-orange-500 transition">
+                    <div class="w-12 h-12 bg-orange-50 rounded-lg mb-6 flex items-center justify-center text-wise font-bold">02</div>
+                    <h3 class="text-xl font-bold mb-4">Network Operations</h3>
+                    <p class="text-gray-500">Technical depth for NOC and Database Management with 24/7 human oversight.</p>
+                </div>
+                <div class="bg-white p-8 rounded-3xl shadow-sm border border-gray-100 hover:border-orange-500 transition">
+                    <div class="w-12 h-12 bg-orange-50 rounded-lg mb-6 flex items-center justify-center text-wise font-bold">03</div>
+                    <h3 class="text-xl font-bold mb-4">Sales Development</h3>
+                    <p class="text-gray-500">C1/C2 speakers who understand cultural nuances to close SMEs effectively.</p>
+                </div>
             </div>
         </div>
     </section>

@@ -231,29 +231,23 @@
         </div>
     </div>
 </section>
-    I understand. We want that "Floating Card" style from the header to sit at the very top of the Careers section, but with more controlled dimensions so it doesn't overwhelm the page.
-
-I have adjusted the height to 300px (down from 400px) and reduced the max-width to make it feel more integrated. I’ve also placed it at the very start of the section, before the "We are hiring" badge.
-
-Updated Careers Section (index.html)
-HTML
 <section id="careers" class="py-24 bg-white">
     <div class="max-w-7xl mx-auto px-6 text-center">
         
-        <div class="relative max-w-2xl mx-auto mb-12 group">
-            <div class="absolute -top-4 -left-4 w-32 h-32 bg-orange-100 rounded-full mix-blend-multiply filter blur-2xl opacity-70 group-hover:opacity-100 transition-opacity"></div>
+        <div class="relative max-w-[800px] mx-auto mb-16 group">
+            <div class="absolute -top-6 -left-6 w-48 h-48 bg-orange-100 rounded-full mix-blend-multiply filter blur-3xl opacity-60 group-hover:opacity-100 transition-opacity"></div>
             
-            <div class="relative bg-gray-100 rounded-[2.5rem] h-[300px] w-full flex items-center justify-center overflow-hidden shadow-xl transition-transform duration-500 group-hover:scale-[1.01]">
+            <div class="relative bg-gray-100 rounded-[3rem] aspect-square w-full flex items-center justify-center overflow-hidden shadow-2xl transition-transform duration-500 group-hover:scale-[1.01]">
                 <img 
                     src="assets/team-hero.png" 
-                    alt="Equipo Wise BPO" 
-                    class="w-full h-full object-cover"
+                    alt="Wise BPO Professional Team" 
+                    class="w-full h-full object-cover object-center"
                 >
             </div>
 
-            <div class="absolute -bottom-4 -right-4 bg-white p-4 rounded-xl shadow-lg hidden lg:block border border-gray-100">
-                <p class="text-wise font-extrabold text-xl">C1/C2</p>
-                <p class="text-gray-400 text-[9px] font-bold uppercase tracking-widest text-center">Talento Estándar</p>
+            <div class="absolute -bottom-6 -right-6 bg-white p-6 rounded-2xl shadow-xl hidden lg:block border border-gray-100">
+                <p class="text-wise font-extrabold text-2xl">C1/C2</p>
+                <p class="text-gray-400 text-[10px] font-bold uppercase tracking-widest">Standard Talent</p>
             </div>
         </div>
 
@@ -266,23 +260,23 @@ HTML
         </h2>
         
         <p class="text-gray-500 max-w-2xl mx-auto text-lg mb-12">
-            We are looking for elite C1/C2 communicators and technical experts to join our US Nearshore centers of excellence. [cite_start]Start your journey with a boutique BPO that values your professional evolution. [cite: 20, 47]
+            We are looking for elite C1/C2 communicators and technical experts to join our US Nearshore centers of excellence. Start your journey with a boutique BPO that values your professional evolution.
         </p>
 
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-16 max-w-6xl mx-auto">
-            <div class="p-6 rounded-2xl bg-slate-50 border border-slate-100 text-left hover:border-[#FF6701] transition">
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-16 max-w-6xl mx-auto text-left">
+            <div class="p-6 rounded-2xl bg-slate-50 border border-slate-100 hover:border-[#FF6701] transition">
                 <h4 class="font-bold text-slate-900 mb-1">Sales & Account Mgmt</h4>
                 <p class="text-xs text-gray-400 uppercase font-bold tracking-tight">Revenue & Growth</p>
             </div>
-            <div class="p-6 rounded-2xl bg-slate-50 border border-slate-100 text-left hover:border-[#FF6701] transition">
+            <div class="p-6 rounded-2xl bg-slate-50 border border-slate-100 hover:border-[#FF6701] transition">
                 <h4 class="font-bold text-slate-900 mb-1">Tech Support / NOC</h4>
                 <p class="text-xs text-gray-400 uppercase font-bold tracking-tight">Technical Depth</p>
             </div>
-            <div class="p-6 rounded-2xl bg-slate-50 border border-slate-100 text-left hover:border-[#FF6701] transition">
+            <div class="p-6 rounded-2xl bg-slate-50 border border-slate-100 hover:border-[#FF6701] transition">
                 <h4 class="font-bold text-slate-900 mb-1">Customer Support</h4>
                 <p class="text-xs text-gray-400 uppercase font-bold tracking-tight">Service Excellence</p>
             </div>
-            <div class="p-6 rounded-2xl bg-slate-50 border border-slate-100 text-left hover:border-[#FF6701] transition">
+            <div class="p-6 rounded-2xl bg-slate-50 border border-slate-100 hover:border-[#FF6701] transition">
                 <h4 class="font-bold text-slate-900 mb-1">Concierge Service</h4>
                 <p class="text-xs text-gray-400 uppercase font-bold tracking-tight">High-Touch Care</p>
             </div>
@@ -460,6 +454,7 @@ HTML
 </footer>
 </body>
 </html>
+
 
 
 

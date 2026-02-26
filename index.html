@@ -31,7 +31,24 @@
     0%, 100% { transform: scale(1); box-shadow: 0 10px 25px -5px rgba(255, 103, 1, 0.4); }
     50% { transform: scale(1.05); box-shadow: 0 20px 35px -5px rgba(255, 103, 1, 0.6); }
 }
+/* Vertical Tab Styling */
+.vertical-tab {
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    transform: rotate(180deg);
+    /* Rounds the top-left and bottom-left of the tab as it sits on the right edge */
+    border-radius: 0 12px 12px 0; 
+}
 
+/* Horizontal Breathing Animation */
+@keyframes tabBreathe {
+    0%, 100% { transform: rotate(180deg) translateX(0); }
+    50% { transform: rotate(180deg) translateX(8px); } /* Tab peeks out slightly */
+}
+
+.animate-tab-breathe {
+    animation: tabBreathe 3s ease-in-out infinite;
+}
 .animate-breathe {
     animation: breathe 3s ease-in-out infinite;
 }
@@ -52,14 +69,11 @@
 </style>
 </head>
 <body class="bg-white">
-<div id="sticky-quote" class="fixed top-6 left-1/2 -translate-x-1/2 z-[100] opacity-0 pointer-events-none transition-all duration-500 md:left-auto md:translate-x-0 md:right-8">
+<div id="sticky-quote" class="fixed right-0 top-1/2 -translate-y-1/2 z-[100] opacity-0 pointer-events-none transition-all duration-500">
     <a href="https://ttqpnocyvmt.typeform.com/quote" 
        target="_blank" 
-       class="shape-enticing animate-breathe bg-[#FF6701] text-white px-8 py-4 font-black shadow-2xl hover:brightness-110 transition-all inline-block text-center border-2 border-white/20">
-        <span class="flex items-center gap-2">
-            Request a Quote
-            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
-        </span>
+       class="vertical-tab animate-tab-breathe bg-[#FF6701] text-white px-3 py-8 font-extrabold shadow-[-5px_0_15px_rgba(0,0,0,0.2)] hover:pr-8 transition-all inline-block border-l-2 border-y-2 border-white/30">
+        REQUEST A QUOTE
     </a>
 </div>
    <nav class="flex justify-between items-center px-6 py-8 max-w-7xl mx-auto">
@@ -477,18 +491,18 @@
     <script>
     window.addEventListener('scroll', function() {
         const stickyBtn = document.getElementById('sticky-quote');
-        // If user scrolls more than 600px, show the button
-        if (window.scrollY > 600) {
-            stickyBtn.classList.remove('opacity-0', 'pointer-events-none', '-translate-y-4');
-            stickyBtn.classList.add('opacity-100', 'translate-y-0');
+        if (window.scrollY > 500) { // Shows after scrolling 500px
+            stickyBtn.classList.remove('opacity-0', 'pointer-events-none');
+            stickyBtn.classList.add('opacity-100');
         } else {
-            stickyBtn.classList.add('opacity-0', 'pointer-events-none', '-translate-y-4');
-            stickyBtn.classList.remove('opacity-100', 'translate-y-0');
+            stickyBtn.classList.add('opacity-0', 'pointer-events-none');
+            stickyBtn.classList.remove('opacity-100');
         }
     });
 </script>
 </body>
 </html>
+
 
 
 

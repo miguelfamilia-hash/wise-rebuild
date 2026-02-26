@@ -27,6 +27,19 @@
         .text-wise { color: var(--wise-orange); }
         .fade-in { animation: fadeIn 1.2s ease-out forwards; opacity: 0; }
         @keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+        @keyframes breathe {
+    0%, 100% { transform: scale(1); box-shadow: 0 10px 25px -5px rgba(255, 103, 1, 0.4); }
+    50% { transform: scale(1.05); box-shadow: 0 20px 35px -5px rgba(255, 103, 1, 0.6); }
+}
+
+.animate-breathe {
+    animation: breathe 3s ease-in-out infinite;
+}
+
+/* Custom "Enticing" Shape: Slight organic rounding */
+.shape-enticing {
+    border-radius: 60% 40% 60% 40% / 40% 60% 40% 60%;
+}
     </style>
     <style>
     html {
@@ -39,9 +52,14 @@
 </style>
 </head>
 <body class="bg-white">
-<div id="sticky-quote" class="fixed top-4 left-1/2 -translate-x-1/2 z-[100] opacity-0 pointer-events-none transition-all duration-300 md:left-auto md:translate-x-0 md:right-6">
-    <a href="https://ttqpnocyvmt.typeform.com/quote" target="_blank" class="bg-[#FF6701] text-white px-6 py-3 rounded-full font-bold shadow-2xl hover:scale-105 transition-transform text-sm md:text-base">
-        Request a Quote
+<div id="sticky-quote" class="fixed top-6 left-1/2 -translate-x-1/2 z-[100] opacity-0 pointer-events-none transition-all duration-500 md:left-auto md:translate-x-0 md:right-8">
+    <a href="https://ttqpnocyvmt.typeform.com/quote" 
+       target="_blank" 
+       class="shape-enticing animate-breathe bg-[#FF6701] text-white px-8 py-4 font-black shadow-2xl hover:brightness-110 transition-all inline-block text-center border-2 border-white/20">
+        <span class="flex items-center gap-2">
+            Request a Quote
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+        </span>
     </a>
 </div>
    <nav class="flex justify-between items-center px-6 py-8 max-w-7xl mx-auto">
@@ -471,6 +489,7 @@
 </script>
 </body>
 </html>
+
 
 
 

@@ -39,7 +39,11 @@
 </style>
 </head>
 <body class="bg-white">
-
+<div id="sticky-quote" class="fixed top-4 left-1/2 -translate-x-1/2 z-[100] opacity-0 pointer-events-none transition-all duration-300 md:left-auto md:translate-x-0 md:right-6">
+    <a href="https://ttqpnocyvmt.typeform.com/quote" target="_blank" class="bg-[#FF6701] text-white px-6 py-3 rounded-full font-bold shadow-2xl hover:scale-105 transition-transform text-sm md:text-base">
+        Request a Quote
+    </a>
+</div>
    <nav class="flex justify-between items-center px-6 py-8 max-w-7xl mx-auto">
     <div class="flex items-center">
         <img src="assets/logo-main.png" alt="Wise BPO Logo" class="h-12 w-auto object-contain">
@@ -67,7 +71,7 @@
                 Boutique nearshore talent specializing in roles AI can't touch. We provide C1/C2 communication and technical expertise.
             </p>
             <div class="mt-12">
-                <button class="bg-wise text-white px-10 py-5 rounded-2xl font-bold text-lg hover:shadow-2xl transition">Explore Our Nearshore Roles</button>
+                <a href="https://ttqpnocyvmt.typeform.com/quote" target="_blank" class="bg-wise text-white px-10 py-5 rounded-2xl font-bold text-lg hover:shadow-2xl transition inline-block">Request a Quote</a>
             </div>
         </div>
         <div class="md:w-1/2 flex justify-end fade-in-right" style="animation-delay: 0.2s;">
@@ -452,8 +456,22 @@
         </div>
     </div>
 </footer>
+    <script>
+    window.addEventListener('scroll', function() {
+        const stickyBtn = document.getElementById('sticky-quote');
+        // If user scrolls more than 600px, show the button
+        if (window.scrollY > 600) {
+            stickyBtn.classList.remove('opacity-0', 'pointer-events-none', '-translate-y-4');
+            stickyBtn.classList.add('opacity-100', 'translate-y-0');
+        } else {
+            stickyBtn.classList.add('opacity-0', 'pointer-events-none', '-translate-y-4');
+            stickyBtn.classList.remove('opacity-100', 'translate-y-0');
+        }
+    });
+</script>
 </body>
 </html>
+
 
 
 
